@@ -1,0 +1,32 @@
+ul.nav.navbar-nav
+    li.dropdown
+        a.dropdown-toggle(data-toggle="dropdown", href="#")
+            span.octicon.octicon-list-unordered
+            = " "
+            = toc.title
+            b.caret
+        ul.dropdown-menu.menu-toc(role="menu")
+            each chapter in toc.chapters
+                li.menu-toc-chapter
+                    a(href=chapter.href)= chapter.text
+                    ul.menu-section-links
+                        each section in chapter.sections
+                            li
+                                a(href=section.href)= section.text
+
+ul.nav.navbar-nav.navbar-right
+    li.dropdown
+        a.dropdown-toggle(data-toggle="dropdown", href="#")
+            span.octicon.octicon-globe
+            = " "
+            = supportTranslations.title
+            b.caret
+        ul.dropdown-menu(role="menu")
+            each t in supportTranslations.links
+                li
+                    a(href="#{t.link}")= t.text
+
+    li
+        a(href="#{about.link}")
+            span.octicon.octicon-question
+            |  #{about.text}

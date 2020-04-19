@@ -1,0 +1,43 @@
+doctype
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title= title
+
+        block header
+
+    body
+        a.sr-only(href="#main") SKIP TO CONTENT
+
+        div#pjax-container
+            div#header.navbar.navbar-fixed-top.navbar-inverse
+                div.container
+                    div.navbar-header
+                        block brand
+
+                        button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navigation")
+                            span.sr-only Toggle Navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                    div.navbar-collapse.collapse.navigation
+                        != menu
+
+
+            div.container#main
+                div.row.wrap
+                    block row
+                div.footer
+                    != footer
+
+        block scripts
+
+        if analytics.google
+            script.
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                ga('create', '#{analytics.google}' , 'auto');
+                ga('send', 'pageview');

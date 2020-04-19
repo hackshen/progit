@@ -1,0 +1,19 @@
+div.pull-left
+    span.build-date
+        = buildDate
+
+    = symbolComma
+
+    span.build-source-version
+        != buildSourceRevision
+
+    = symbolComma
+
+    span.application-version
+        = applicationVersion
+
+    = symbolPeriod
+
+div.pull-right
+    = madeBy
+    a(href="http://hackshen.com", target="_blank")  Hshen

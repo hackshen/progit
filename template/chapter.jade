@@ -1,0 +1,26 @@
+extends layout
+
+block header
+    link(rel="stylesheet", type="text/css", href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet", type="text/css", href="../../assets/vendor/octicons/octicons/octicons.css")
+    link(rel="stylesheet", type="text/css", href="../../assets/vendor/nprogress/nprogress.css")
+    link(rel="stylesheet", type="text/css", href="../../assets/css/main.css")
+    link(rel="shortcut icon", type="images/x-icon", href="../../assets/img/favicon.ico")
+
+block brand
+    a#brand(href="/progit/")
+        img.logo(src="../../assets/img/git-logo.png", alt="git")
+
+block row
+    div.col-md-4
+        div.ph20 
+            ul.nav.sub-nav !{sidebar}
+    div.col-md-8
+        div.ph20 !{content}
+
+block prepend scripts
+    script(src="../../assets/vendor/jquery/dist/jquery.min.js")
+    script(src="../../assets/vendor/jquery-pjax/jquery.pjax.js")
+    script(src="../../assets/vendor/nprogress/nprogress.js")
+    script(src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js")
+    script(src="../../assets/js/main.js")

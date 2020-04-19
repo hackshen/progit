@@ -1,0 +1,22 @@
+{
+    "name": "Host.ProGit.book.on.Github",
+    "version": "0.0.7",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/iissnan/progit.git"
+    },
+    "devDependencies": {
+        "markdown": "latest",
+        "jade": "latest",
+        "moment": "latest",
+        "shelljs": "0.2.6",
+        "gulp": "*",
+        "gulp-jshint": "*",
+        "gulp-mocha": "*",
+        "coffee-script": "*",
+        "jshint-stylish": "*",
+        "mocha": "*",
+        "chai": "*",
+        "colors": "*"
+    }
+}

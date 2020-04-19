@@ -1,0 +1,301 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Viewing the Commit History - Git Basics - Pro Git</title><link rel="stylesheet" type="text/css" href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="../../assets/vendor/octicons/octicons/octicons.css"><link rel="stylesheet" type="text/css" href="../../assets/vendor/nprogress/nprogress.css"><link rel="stylesheet" type="text/css" href="../../assets/css/main.css"><link rel="shortcut icon" type="images/x-icon" href="../../assets/img/favicon.ico"></head><body><a href="#main" class="sr-only">SKIP TO CONTENT</a><div id="pjax-container"><div id="header" class="navbar navbar-fixed-top navbar-inverse"><div class="container"><div class="navbar-header"><a id="brand" href="/progit/"><img src="../../assets/img/git-logo.png" alt="git" class="logo"></a><button type="button" data-toggle="collapse" data-target=".navigation" class="navbar-toggle"><span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="navbar-collapse collapse navigation"><ul class="nav navbar-nav"><li class="dropdown"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><span class="octicon octicon-list-unordered"></span> Table Of Contents<b class="caret"></b></a><ul role="menu" class="dropdown-menu menu-toc"><li class="menu-toc-chapter"><a href="ch1_0.html">1   Getting Started </a><ul class="menu-section-links"><li><a href="ch1_1.html">1.1   About Version Control </a></li><li><a href="ch1_2.html">1.2   A Short History of Git </a></li><li><a href="ch1_3.html">1.3   Git Basics </a></li><li><a href="ch1_4.html">1.4   Installing Git </a></li><li><a href="ch1_5.html">1.5   First-Time Git Setup </a></li><li><a href="ch1_6.html">1.6   Getting Help </a></li><li><a href="ch1_7.html">1.7   Summary </a></li></ul></li><li class="menu-toc-chapter"><a href="ch2_0.html">2   Git Basics </a><ul class="menu-section-links"><li><a href="ch2_1.html">2.1   Getting a Git Repository </a></li><li><a href="ch2_2.html">2.2   Recording Changes to the Repository </a></li><li><a href="ch2_3.html">2.3   Viewing the Commit History </a></li><li><a href="ch2_4.html">2.4   Undoing Things </a></li><li><a href="ch2_5.html">2.5   Working with Remotes </a></li><li><a href="ch2_6.html">2.6   Tagging </a></li><li><a href="ch2_7.html">2.7   Tips and Tricks </a></li><li><a href="ch2_8.html">2.8   Summary </a></li></ul></li><li class="menu-toc-chapter"><a href="ch3_0.html">3   Git Branching </a><ul class="menu-section-links"><li><a href="ch3_1.html">3.1   What a Branch Is </a></li><li><a href="ch3_2.html">3.2   Basic Branching and Merging </a></li><li><a href="ch3_3.html">3.3   Branch Management </a></li><li><a href="ch3_4.html">3.4   Branching Workflows </a></li><li><a href="ch3_5.html">3.5   Remote Branches </a></li><li><a href="ch3_6.html">3.6   Rebasing </a></li><li><a href="ch3_7.html">3.7   Summary </a></li></ul></li><li class="menu-toc-chapter"><a href="ch4_0.html">4   Git on the Server </a><ul class="menu-section-links"><li><a href="ch4_1.html">4.1   The Protocols </a></li><li><a href="ch4_2.html">4.2   Getting Git on a Server </a></li><li><a href="ch4_3.html">4.3   Generating Your SSH Public Key </a></li><li><a href="ch4_4.html">4.4   Setting Up the Server </a></li><li><a href="ch4_5.html">4.5   Public Access </a></li><li><a href="ch4_6.html">4.6   GitWeb </a></li><li><a href="ch4_7.html">4.7   Gitosis </a></li><li><a href="ch4_8.html">4.8   Gitolite </a></li><li><a href="ch4_9.html">4.9   Git Daemon </a></li><li><a href="ch4_10.html">4.10   Hosted Git </a></li><li><a href="ch4_11.html">4.11   Summary </a></li></ul></li><li class="menu-toc-chapter"><a href="ch5_0.html">5   Distributed Git </a><ul class="menu-section-links"><li><a href="ch5_1.html">5.1   Distributed Workflows </a></li><li><a href="ch5_2.html">5.2   Contributing to a Project </a></li><li><a href="ch5_3.html">5.3   Maintaining a Project </a></li><li><a href="ch5_4.html">5.4   Summary </a></li></ul></li><li class="menu-toc-chapter"><a href="ch6_0.html">6   Git Tools </a><ul class="menu-section-links"><li><a href="ch6_1.html">6.1   Revision Selection </a></li><li><a href="ch6_2.html">6.2   Interactive Staging </a></li><li><a href="ch6_3.html">6.3   Stashing </a></li><li><a href="ch6_4.html">6.4   Rewriting History </a></li><li><a href="ch6_5.html">6.5   Debugging with Git </a></li><li><a href="ch6_6.html">6.6   Submodules </a></li><li><a href="ch6_7.html">6.7   Subtree Merging </a></li><li><a href="ch6_8.html">6.8   Summary </a></li></ul></li><li class="menu-toc-chapter"><a href="ch7_0.html">7   Customizing Git </a><ul class="menu-section-links"><li><a href="ch7_1.html">7.1   Git Configuration </a></li><li><a href="ch7_2.html">7.2   Git Attributes </a></li><li><a href="ch7_3.html">7.3   Git Hooks </a></li><li><a href="ch7_4.html">7.4   An Example Git-Enforced Policy </a></li><li><a href="ch7_5.html">7.5   Summary </a></li></ul></li><li class="menu-toc-chapter"><a href="ch8_0.html">8   Git and Other Systems </a><ul class="menu-section-links"><li><a href="ch8_1.html">8.1   Git and Subversion </a></li><li><a href="ch8_2.html">8.2   Migrating to Git </a></li><li><a href="ch8_3.html">8.3   Summary </a></li></ul></li><li class="menu-toc-chapter"><a href="ch9_0.html">9   Git Internals </a><ul class="menu-section-links"><li><a href="ch9_1.html">9.1   Plumbing and Porcelain </a></li><li><a href="ch9_2.html">9.2   Git Objects </a></li><li><a href="ch9_3.html">9.3   Git References </a></li><li><a href="ch9_4.html">9.4   Packfiles </a></li><li><a href="ch9_5.html">9.5   The Refspec </a></li><li><a href="ch9_6.html">9.6   Transfer Protocols </a></li><li><a href="ch9_7.html">9.7   Maintenance and Data Recovery </a></li><li><a href="ch9_8.html">9.8   Summary </a></li></ul></li></ul></li></ul><ul class="nav navbar-nav navbar-right"><li class="dropdown"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><span class="octicon octicon-globe"></span> Other Translations<b class="caret"></b></a><ul role="menu" class="dropdown-menu"><li><a href="../../index.en.html">English</a></li><li><a href="../../index.html">简体中文</a></li><li><a href="../../index.zh-tw.html">正體中文</a></li></ul></li><li><a href="../../about.html"><span class="octicon octicon-question"></span> About</a></li></ul></div></div></div><div id="main" class="container"><div class="row wrap"><div class="col-md-4"><div class="ph20"> <ul class="nav sub-nav"><li class="nav-header"><a href="ch2_0.html">Git Basics</a></li><li><a href="ch2_1.html">Getting a Git Repository</a></li><li><a href="ch2_2.html">Recording Changes to the Repository</a></li><li><a href="ch2_3.html">Viewing the Commit History</a></li><li><a href="ch2_4.html">Undoing Things</a></li><li><a href="ch2_5.html">Working with Remotes</a></li><li><a href="ch2_6.html">Tagging</a></li><li><a href="ch2_7.html">Tips and Tricks</a></li><li><a href="ch2_8.html">Summary</a></li></ul></div></div><div class="col-md-8"><div class="ph20"><h2>Viewing the Commit History</h2>
+
+<p>After you have created several commits, or if you have cloned a repository with an existing commit history, you’ll probably want to look back to see what has happened. The most basic and powerful tool to do this is the <code>git log</code> command.</p>
+
+<p>These examples use a very simple project called <code>simplegit</code> that I often use for demonstrations. To get the project, run</p>
+
+<pre><code>git clone git://github.com/schacon/simplegit-progit.git</code></pre>
+
+<p>When you run <code>git log</code> in this project, you should get output that looks something like this:</p>
+
+<pre><code>$ git log
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the version number
+
+commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Sat Mar 15 16:40:33 2008 -0700
+
+    removed unnecessary test code
+
+commit a11bef06a3f659402fe7563abf99ad00de2209e6
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Sat Mar 15 10:31:28 2008 -0700
+
+    first commit</code></pre>
+
+<p>By default, with no arguments, <code>git log</code> lists the commits made in that repository in reverse chronological order. That is, the most recent commits show up first. As you can see, this command lists each commit with its SHA-1 checksum, the author’s name and e-mail, the date written, and the commit message.</p>
+
+<p>A huge number and variety of options to the <code>git log</code> command are available to show you exactly what you’re looking for. Here, we’ll show you some of the most-used options.</p>
+
+<p>One of the more helpful options is <code>-p</code>, which shows the diff introduced in each commit. You can also use <code>-2</code>, which limits the output to only the last two entries:</p>
+
+<pre><code>$ git log -p -2
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the version number
+
+diff --git a/Rakefile b/Rakefile
+index a874b73..8f94139 100644
+--- a/Rakefile
++++ b/Rakefile
+@@ -5,5 +5,5 @@ require &#39;rake/gempackagetask&#39;
+ spec = Gem::Specification.new do |s|
+     s.name      =   &quot;simplegit&quot;
+-    s.version   =   &quot;0.1.0&quot;
++    s.version   =   &quot;0.1.1&quot;
+     s.author    =   &quot;Scott Chacon&quot;
+     s.email     =   &quot;schacon@gee-mail.com
+
+commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Sat Mar 15 16:40:33 2008 -0700
+
+    removed unnecessary test code
+
+diff --git a/lib/simplegit.rb b/lib/simplegit.rb
+index a0a60ae..47c6340 100644
+--- a/lib/simplegit.rb
++++ b/lib/simplegit.rb
+@@ -18,8 +18,3 @@ class SimpleGit
+     end
+
+ end
+-
+-if $0 == __FILE__
+-  git = SimpleGit.new
+-  puts git.show
+-end
+\ No newline at end of file</code></pre>
+
+<p>This option displays the same information but with a diff directly following each entry. This is very helpful for code review or to quickly browse what happened during a series of commits that a collaborator has added.</p>
+
+<p>Sometimes it&#39;s easier to review changes on the word level rather than on the line level. There is a <code>--word-diff</code> option available in Git, that you can append to the <code>git log -p</code> command to get word diff instead of normal line by line diff. Word diff format is quite useless when applied to source code, but it comes in handy when applied to large text files, like books or your dissertation. Here is an example:</p>
+
+<pre><code>$ git log -U1 --word-diff
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the version number
+
+diff --git a/Rakefile b/Rakefile
+index a874b73..8f94139 100644
+--- a/Rakefile
++++ b/Rakefile
+@@ -7,3 +7,3 @@ spec = Gem::Specification.new do |s|
+    s.name      =   &quot;simplegit&quot;
+    s.version   =   [-&quot;0.1.0&quot;-]{+&quot;0.1.1&quot;+}
+    s.author    =   &quot;Scott Chacon&quot;</code></pre>
+
+<p>As you can see, there is no added and removed lines in this output as in a normal diff. Changes are shown inline instead. You can see the added word enclosed in <code>{+ +}</code> and removed one enclosed in <code>[- -]</code>. You may also want to reduce the usual three lines context in diff output to only one line, as the context is now words, not lines. You can do this with <code>-U1</code> as we did in the example above.</p>
+
+<p>You can also use a series of summarizing options with <code>git log</code>. For example, if you want to see some abbreviated stats for each commit, you can use the <code>--stat</code> option:</p>
+
+<pre><code>$ git log --stat
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the version number
+
+ Rakefile |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Sat Mar 15 16:40:33 2008 -0700
+
+    removed unnecessary test code
+
+ lib/simplegit.rb |    5 -----
+ 1 file changed, 5 deletions(-)
+
+commit a11bef06a3f659402fe7563abf99ad00de2209e6
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Sat Mar 15 10:31:28 2008 -0700
+
+    first commit
+
+ README           |    6 ++++++
+ Rakefile         |   23 +++++++++++++++++++++++
+ lib/simplegit.rb |   25 +++++++++++++++++++++++++
+ 3 files changed, 54 insertions(+)</code></pre>
+
+<p>As you can see, the <code>--stat</code> option prints below each commit entry a list of modified files, how many files were changed, and how many lines in those files were added and removed. It also puts a summary of the information at the end.
+Another really useful option is <code>--pretty</code>. This option changes the log output to formats other than the default. A few prebuilt options are available for you to use. The <code>oneline</code> option prints each commit on a single line, which is useful if you’re looking at a lot of commits. In addition, the <code>short</code>, <code>full</code>, and <code>fuller</code> options show the output in roughly the same format but with less or more information, respectively:</p>
+
+<pre><code>$ git log --pretty=oneline
+ca82a6dff817ec66f44342007202690a93763949 changed the version number
+085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7 removed unnecessary test code
+a11bef06a3f659402fe7563abf99ad00de2209e6 first commit</code></pre>
+
+<p>The most interesting option is <code>format</code>, which allows you to specify your own log output format. This is especially useful when you’re generating output for machine parsing — because you specify the format explicitly, you know it won’t change with updates to Git:</p>
+
+<pre><code>$ git log --pretty=format:&quot;%h - %an, %ar : %s&quot;
+ca82a6d - Scott Chacon, 11 months ago : changed the version number
+085bb3b - Scott Chacon, 11 months ago : removed unnecessary test code
+a11bef0 - Scott Chacon, 11 months ago : first commit</code></pre>
+
+<p>Table 2-1 lists some of the more useful options that format takes.</p>
+
+<p>&lt;!-- Attention to translators: this is a table declaration.
+The lines must be formatted as follows
+&lt;TAB&gt;&lt;First column text&gt;&lt;TAB&gt;&lt;Second column text&gt;
+--&gt;</p>
+
+<pre><code>Option	Description of Output
+%H	Commit hash
+%h	Abbreviated commit hash
+%T	Tree hash
+%t	Abbreviated tree hash
+%P	Parent hashes
+%p	Abbreviated parent hashes
+%an	Author name
+%ae	Author e-mail
+%ad	Author date (format respects the --date= option)
+%ar	Author date, relative
+%cn	Committer name
+%ce	Committer email
+%cd	Committer date
+%cr	Committer date, relative
+%s	Subject</code></pre>
+
+<p>You may be wondering what the difference is between <em>author</em> and <em>committer</em>. The <em>author</em> is the person who originally wrote the patch, whereas the <em>committer</em> is the person who last applied the patch. So, if you send in a patch to a project and one of the core members applies the patch, both of you get credit — you as the author and the core member as the committer. We’ll cover this distinction a bit more in <em>Chapter 5</em>.</p>
+
+<p>The <code>oneline</code> and <code>format</code> options are particularly useful with another <code>log</code> option called <code>--graph</code>. This option adds a nice little ASCII graph showing your branch and merge history, which we can see in our copy of the Grit project repository:</p>
+
+<pre><code>$ git log --pretty=format:&quot;%h %s&quot; --graph
+* 2d3acf9 ignore errors from SIGCHLD on trap
+*  5e3ee11 Merge branch &#39;master&#39; of git://github.com/dustin/grit
+|\
+| * 420eac9 Added a method for getting the current branch.
+* | 30e367c timeout code and tests
+* | 5a09431 add timeout protection to grit
+* | e1193f8 support for heads with slashes in them
+|/
+* d6016bc require time for xmlschema
+*  11d191e Merge branch &#39;defunkt&#39; into local</code></pre>
+
+<p>Those are only some simple output-formatting options to <code>git log</code> — there are many more. Table 2-2 lists the options we’ve covered so far and some other common formatting options that may be useful, along with how they change the output of the <code>log</code> command.</p>
+
+<p>&lt;!-- Attention to translators: this is a table declaration.
+The lines must be formatted as follows
+&lt;TAB&gt;&lt;First column text&gt;&lt;TAB&gt;&lt;Second column text&gt;
+--&gt;</p>
+
+<pre><code>Option	Description
+-p	Show the patch introduced with each commit.
+--word-diff	Show the patch in a word diff format.
+--stat	Show statistics for files modified in each commit.
+--shortstat	Display only the changed/insertions/deletions line from the --stat command.
+--name-only	Show the list of files modified after the commit information.
+--name-status	Show the list of files affected with added/modified/deleted information as well.
+--abbrev-commit	Show only the first few characters of the SHA-1 checksum instead of all 40.
+--relative-date	Display the date in a relative format (for example, “2 weeks ago”) instead of using the full date format.
+--graph	Display an ASCII graph of the branch and merge history beside the log output.
+--pretty	Show commits in an alternate format. Options include oneline, short, full, fuller, and format (where you specify your own format).
+--oneline	A convenience option short for `--pretty=oneline --abbrev-commit`.</code></pre>
+
+<h3>Limiting Log Output</h3>
+
+<p>In addition to output-formatting options, <code>git log</code> takes a number of useful limiting options — that is, options that let you show only a subset of commits. You’ve seen one such option already — the <code>-2</code> option, which shows only the last two commits. In fact, you can do <code>-&lt;n&gt;</code>, where <code>n</code> is any integer to show the last <code>n</code> commits. In reality, you’re unlikely to use that often, because Git by default pipes all output through a pager so you see only one page of log output at a time.</p>
+
+<p>However, the time-limiting options such as <code>--since</code> and <code>--until</code> are very useful. For example, this command gets the list of commits made in the last two weeks:</p>
+
+<pre><code>$ git log --since=2.weeks</code></pre>
+
+<p>This command works with lots of formats — you can specify a specific date (“2008-01-15”) or a relative date such as “2 years 1 day 3 minutes ago”.</p>
+
+<p>You can also filter the list to commits that match some search criteria. The <code>--author</code> option allows you to filter on a specific author, and the <code>--grep</code> option lets you search for keywords in the commit messages. (Note that if you specify both author and grep options, the command will match commits with both.)</p>
+
+<p>If you want to specify multiple grep options, you have to add <code>--all-match</code> or the command will match commits with either.</p>
+
+<p>The last really useful option to pass to <code>git log</code> as a filter is a path. If you specify a directory or file name, you can limit the log output to commits that introduced a change to those files. This is always the last option and is generally preceded by double dashes (<code>--</code>) to separate the paths from the options.</p>
+
+<p>In Table 2-3 we’ll list these and a few other common options for your reference.</p>
+
+<p>&lt;!-- Attention to translators: this is a table declaration.
+The lines must be formatted as follows
+&lt;TAB&gt;&lt;First column text&gt;&lt;TAB&gt;&lt;Second column text&gt;
+--&gt;</p>
+
+<pre><code>Option	Description
+-(n)	Show only the last n commits
+--since, --after	Limit the commits to those whose CommitDate was made on-or-after the specified date/time.
+--until, --before	Limit the commits to those whose CommitDate was made on-or-before the specified date/time.
+--author	Only show commits in which the author entry matches the specified string.
+--committer	Only show commits in which the committer entry matches the specified string.</code></pre>
+
+<h3>Limiting Log Output according to Date/Time</h3>
+
+<p>To determine which commits in the Git source code repository (git://git.kernel.org/pub/scm/git/git.git) have CommitDate on 2014-04-29 relative to your local timezone (as set on your computer), use</p>
+
+<pre><code>$ git log --after=&quot;2014-04-29 00:00:00&quot; --before=&quot;2014-04-29 23:59:59&quot; \
+  --pretty=fuller</code></pre>
+
+<p>As the output will be different according to the timezone where it will be run, it&#39;s recommended to always use an absolute time such as ISO 8601 format (which includes timezone information) as argument to <code>--after</code> and <code>--before</code>, so that everone running the command will get the same repeatable results. </p>
+
+<p>To obtain commits made at a specific instant in time (e.g. 29 April 2013 at 17:07:22 CET), we can use</p>
+
+<pre><code>$ git log  --after=&quot;2013-04-29T17:07:22+0200&quot;      \
+          --before=&quot;2013-04-29T17:07:22+0200&quot; --pretty=fuller
+
+commit de7c201a10857e5d424dbd8db880a6f24ba250f9
+Author:     Ramkumar Ramachandra &lt;artagnon@gmail.com&gt;
+AuthorDate: Mon Apr 29 18:19:37 2013 +0530
+Commit:     Junio C Hamano &lt;gitster@pobox.com&gt;
+CommitDate: Mon Apr 29 08:07:22 2013 -0700
+
+    git-completion.bash: lexical sorting for diff.statGraphWidth
+
+    df44483a (diff --stat: add config option to limit graph width,
+    2012-03-01) added the option diff.startGraphWidth to the list of
+    configuration variables in git-completion.bash, but failed to notice
+    that the list is sorted alphabetically.  Move it to its rightful place
+    in the list.
+
+    Signed-off-by: Ramkumar Ramachandra &lt;artagnon@gmail.com&gt;
+    Signed-off-by: Junio C Hamano &lt;gitster@pobox.com&gt;</code></pre>
+
+<p>The above times (<code>AuthorDate</code>, <code>CommitDate</code>) are displayed in default format (<code>--date=default</code>), which shows timezone information of respective author and commiter.</p>
+
+<p>Other useful formats include <code>--date=iso</code> (ISO 8601), <code>--date=rfc</code> (RFC 2822), <code>--date=raw</code> (seconds since the epoch (1970-01-01 UTC)) <code>--date=local</code> (times according to your local timezone) as well as <code>--date=relative</code> (e.g. &quot;2 hours ago&quot;).</p>
+
+<p>When using <code>git log</code> without specifying time, the time defaults to the time at which the command is run on your computer (keeping the identical offset from UTC).</p>
+
+<p>For example, running a <code>git log</code> at 09:00 on your computer with your timezone currently 3 hours ahead of UTC, makes the following two commands equivalent:</p>
+
+<pre><code>$ git log --after=2008-06-01 --before=2008-07-01
+$ git log --after=&quot;2008-06-01T09:00:00+0300&quot; \
+    --before=&quot;2008-07-01T09:00:00+0300&quot;</code></pre>
+
+<p>As a final example, if you want to see which commits modifying test files in the Git source code history were committed by Junio Hamano with CommitDate being in the month of October 2008 (relative to the timezone of New York) and were not merges, you can run something like this:</p>
+
+<pre><code>    $ git log --pretty=&quot;%h - %s&quot; --author=gitster \
+       --after=&quot;2008-10-01T00:00:00-0400&quot;         \
+      --before=&quot;2008-10-31T23:59:59-0400&quot; --no-merges -- t/
+5610e3b - Fix testcase failure when extended attribute
+acd3b9e - Enhance hold_lock_file_for_{update,append}()
+f563754 - demonstrate breakage of detached checkout wi
+d1a43f2 - reset --hard/read-tree --reset -u: remove un
+51a94af - Fix &quot;checkout --track -b newbranch&quot; on detac
+b0ad11e - pull: allow &quot;git pull origin $something:$cur</code></pre>
+
+<p>Of the more than 36,000 commits in the Git source code history, this command shows the 6 that match those criteria.</p>
+
+<h3>Using a GUI to Visualize History</h3>
+
+<p>If you like to use a more graphical tool to visualize your commit history, you may want to take a look at a Tcl/Tk program called <code>gitk</code> that is distributed with Git. Gitk is basically a visual <code>git log</code> tool, and it accepts nearly all the filtering options that <code>git log</code> does. If you type <code>gitk</code> on the command line in your project, you should see something like Figure 2-2.</p>
+
+<p><img class="img-responsive center-block" src="../../book_src/figures/18333fig0202-tn.png"></br>
+Figure 2-2. The gitk history visualizer.</p>
+
+<p>You can see the commit history in the top half of the window along with a nice ancestry graph. The diff viewer in the bottom half of the window shows you the changes introduced at any commit you click.</p>
+
+</div></div></div><div class="footer"><div class="pull-left"><span class="build-date">Build at: 2020-04-19 16:00:41</span>,<span class="build-source-version">Source revision:<a href="https://github.com/progit/progit/tree/6895c8264604032f24ffdee44123b922aabadf5b" target="_blank">6895c82</a></span>,<span class="application-version">Application version: 0.0.7</span>.</div><div class="pull-right">Made by<a href="http://hackshen.com" target="_blank"> Hshen</a></div></div></div></div><script src="../../assets/vendor/jquery/dist/jquery.min.js"></script><script src="../../assets/vendor/jquery-pjax/jquery.pjax.js"></script><script src="../../assets/vendor/nprogress/nprogress.js"></script><script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script><script src="../../assets/js/main.js"></script></body></html>
